@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://oy0y0n7bb3ki"]
+
+[ext_resource type="Script" uid="uid://dvns2e3o5h5py" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://be8mn4sbvc6np" path="res://spaceship.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(79.5, 103)
+
+[node name="Player" type="Area2D" unique_id=979253722]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1720581046]
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1426932703]
+position = Vector2(-1.75, 0)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="Cannon" type="Marker2D" parent="." unique_id=1794928414]
+position = Vector2(78, 0)
